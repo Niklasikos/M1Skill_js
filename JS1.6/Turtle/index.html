@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 <body>
@@ -27,12 +27,35 @@
     }
   }
 
-  //This code is getting executed.
-  for(let i = 0; i < 6; i++){
-    p.forward(50);
-    p.left(45);
+  function Circle(size1){
+    for(let i = 0; i < 180; i++){
+    p.forward(size1);
+    p.left(2);
+    }
   }
+
+  function Bloem(size2){
+    for(let i = 0; i < 40; i++){
+    p.forward(size2);
+    p.left(500);
+    }
+  }
+
+  //This code is getting executed.
+
+  Square(100);
 	
+  p.penDown = false;
+  p.moveto(800, 300)
+  p.penDown = true;
+
+  Bloem(200)
+
+  p.penDown = false;
+  p.moveto(650, 350)
+  p.penDown = true;
+  
+  Circle(4)
 
 </script>
 </html>
